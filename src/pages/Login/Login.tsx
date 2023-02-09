@@ -1,15 +1,12 @@
 
 
 
-function login() {
+function Login() {
 
   return (
     <>
-      <div className="containerLogin">
-        <div></div>
-      </div>
     </>
   )
 }
 
-export default login
+export default Login

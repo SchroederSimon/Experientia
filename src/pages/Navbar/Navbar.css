@@ -1,0 +1,33 @@
+.containerNavbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 7vh;
+    background-color: var(--colorWhite);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10% 0 10%;
+}
+.navLinks ul{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em;
+    gap: 40px;
+}
+
+.buttonLogin button{
+    padding: 10px 25px;
+    box-shadow: 3px 4px 0px 0px var(--colorBlack);
+    background-color: var(--colorYellow);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: var(--colorBlack);
+    font-size: 18px;
+    text-decoration: none;
+}
