@@ -1,11 +1,11 @@
 .containerHome {
     width: 100%;
     height: 93vh;
-    background-color: red;
     margin: 0;
     padding: 0;
 }
 
+/* Navigation */
 .searchBarContainer {
     background-image: url("/backgroundphoto.png");
     width: 100%;
@@ -54,4 +54,32 @@ label {
     padding: 9px;
     border-radius: 15px;
     font-size: 1.2em;
+}
+
+/* Quotes */
+.quotesContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    height: 429px;
+    flex-wrap: wrap;
+}
+.quotesContainer h2{
+    text-align: center;
+    width: 30%;
+    background-color: aqua;
+}
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.quotes img{
+    width: 20%;
+}
+.quotes p{
+
 }
