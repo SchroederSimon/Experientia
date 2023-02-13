@@ -59,27 +59,41 @@ label {
 /* Quotes */
 .quotesContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: red;
     width: 100%;
     height: 429px;
-    flex-wrap: wrap;
 }
-.quotesContainer h2{
+.quotesTitle{
+    display: flex;
+    align-items: center;
     text-align: center;
-    width: 30%;
-    background-color: aqua;
+    height: 200px;
+    width: 100%;
+    background-image: url('/markerbcg.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    font-size: 1em;
+    padding: 2.5%;
 }
 
 .quotes {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2% 0 2%;
 }
 .quotes img{
-    width: 20%;
+    width: 50%;
 }
-.quotes p{
 
+.quotes p{
+    box-shadow: 3px 4px 0px 0px var(--colorYellow);
+    outline: solid 1px var(--colorBlack);
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
 }

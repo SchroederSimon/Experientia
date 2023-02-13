@@ -1,13 +1,13 @@
 const QUOTES = [
     {
         id: 1,
-        quote: '“En la primer carrera, odiaba ir, sufría mal, salía de las clases llorando por situaciones con profesores, había mucha superioridad por su parte, como mucho individualismo, no les importaba la otra persona”',
+        quote: '“En la primer carrera, odiaba ir, sufría mal, salía de las clases llorando, había mucha superioridad por su parte, como mucho individualismo, no les importaba la otra persona”',
         profilePicture:  "/profile1.png"
     },
 
     {
         id: 2,
-        quote: '”Me cambie de la carrera por presiones familiares, me tuve que ir a vivir sola a una ciudad que no conocía y no me pude hacer muchos amigos. Mi cambio de carrera no fue repentino, estuve varios meses sin hacer nada”',
+        quote: '”Me tuve que ir a vivir solo a una ciudad que no conocía y no me pude hacer muchos amigos. Mi cambio de carrera no fue repentino, estuve varios meses sin hacer nada”',
         profilePicture:  "/profile2.png"
     },
     {

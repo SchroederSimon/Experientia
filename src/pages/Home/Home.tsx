@@ -31,9 +31,11 @@ function Home() {
           </div>
         </div>
         <div className="quotesContainer">
-        <h2>Did you know that 50% of students in Argentina drop out
-            of university?
-          </h2>
+          <div className="quotesTitle">
+            <h2>Did you know that 50% of students in Argentina drop out
+              of university?
+            </h2>
+          </div>
           {
             quotes.map(quote => {
               return (
