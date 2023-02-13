@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import About from './pages/About/About'
 
 
 // Pages import
@@ -13,6 +14,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <About />
     </>
   )
 }
