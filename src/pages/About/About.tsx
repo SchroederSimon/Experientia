@@ -55,20 +55,23 @@ function About() {
                 }
             </div>
             <div className="explain-actors-relation">
-                {
-                    iconsActors.map(iconActors => {
-                        return (
-                            <div className="container-icons-actors" key={iconActors.id}>
-                                <div className="explain-titles-actors">
-                                    <h2>{iconActors.title}</h2>
+                <div className="explain-actors-container">
+                    {
+                        iconsActors.map(iconActors => {
+                            return (
+                                <div className="container-icons-actors" key={iconActors.id}>
+                                    <div className="explain-titles-actors">
+                                        <h2>{iconActors.title}</h2>
+                                    </div>
+                                    <div className="imageOverlay imageOverlay--primary">
+                                        <p>{iconActors.detail}</p>
+                                    </div>
                                 </div>
-                                <div className="imageOverlay2 imageOverlay--primary2">
-                                    <p>{iconActors.detail}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
+
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
