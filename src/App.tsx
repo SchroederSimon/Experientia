@@ -6,6 +6,7 @@ import About from './pages/About/About'
 import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Navbar from './pages/Navbar/Navbar'
+import News from './pages/News/News'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <News />
     </>
   )
 }
