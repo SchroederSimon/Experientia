@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { newsAPI } from '../../hooks/newsHook';
+import { useRedditPosts } from '../../hooks/redditHook';
 import { articleInterface } from '../../models/articlesInterface'
 
 // Service api news
@@ -20,6 +21,8 @@ function News() {
         fetchArticles();
     }, []);
 
+    const posts = useRedditPosts();
+    
     return (
         <div className="news-blog-container">
             <div className="news-left-side">
@@ -36,18 +39,17 @@ function News() {
                 }
             </div>
             <div className="blog-right-side">
-                <h1>BLOG POSTS</h1>
+                <h1>REDDIT POSTS</h1>
                 {
-                    articles.slice(0, 5).map((article) => (
-                        <div className="news-content" key={article.url}>
-                            <img src={article.urlToImage} alt={article.title} />
+                    posts.slice(0, 7).map((post) => (
+                        <div className="news-content" key={post.url}>
                             <div className="news-information">
-                                <span>{article.author}</span>
-                                <h2>{article.title}</h2>
-                                <p>{article.description}<span><a href={article.url} target="_blank">Read more</a></span>
+                                <span>{post.author}</span>
+                                <h2>{post.title}</h2>
+                                <p>{post.selftext?.split(' ').slice(0, 100).join(' ')}<span><a href={post.url} target="_blank"> Read more</a></span>
                                 </p>
                             </div>
-                        </div>
+                        </div> 
                     ))
                 }
             </div>
@@ -96,3 +98,7 @@ export default News
     </div>
 </div>
 </div> */}
+
+function getMediumPostsByTag(arg0: string) {
+        throw new Error('Function not implemented.');
+    }
