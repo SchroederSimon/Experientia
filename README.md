@@ -7,4 +7,8 @@ interviews with direct and indirect users, created journey maps, brainstormed id
 The MVP connects students, professors, and professionals to facilitate information sharing and job opportunities. Our ultimate aim is to simplify the 
 process of finding the right career and connecting with the job market.
 
+
 Project is under construction.
+UI & UX. Early stage
+API from reddit. Done
+API with news. Done
