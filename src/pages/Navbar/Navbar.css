@@ -3,8 +3,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 7vh;
-    color: var(--colorWhite);
+    height: 10vh;
+    color: var(--colorBlack);
+    position: fixed;
+    background-color: white;
 }
 .navbar{
     display: flex;

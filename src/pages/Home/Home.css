@@ -1,57 +1,27 @@
 .containerHome {
     width: 100%;
-    height: 93vh;
+    height: 100vh;
 }
 
 /* Navigation */
-.searchBarContainer {
-    background-image: url("/backgroundphoto.png");
+.phraseContainer {
+    background: url("fondo-home.png");
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 472px;
+    height: 560px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.searchBar {
-    color: var(--colorWhite);
+    flex-direction: column;
     text-align: center;
 }
-
-.searchBar h1 {
-    margin-bottom: 50px;
+.phraseContainer h1{
+    font-size: 3em;
 }
-
-.searchBar input[type="text"] {
-    position: relative;
-    padding: 12px;
+.phraseContainer p{
     font-size: 1.2em;
-    width: 70%;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 3px 4px 0px 0px var(--colorYellow);
-}
-
-.searchBar input[type="text"]:focus {
-    border: none;
-    outline: none;
-}
-
-
-.input-wrapper {
-    position: relative;
-}
-
-label {
-    position: absolute;
-    left: 540px;
-    top: 2px;
-    color: #000000;
-    cursor: text;
-    background-color: white;
-    padding: 9px;
-    border-radius: 15px;
-    font-size: 1.2em;
+    width: 30%;
 }
 
 /* Quotes */
@@ -61,6 +31,7 @@ label {
     align-items: center;
     width: 100%;
     height: 429px;
+    color: var(--colorBlack);
 }
 .quotesTitle{
     display: flex;
@@ -68,16 +39,12 @@ label {
     text-align: center;
     height: 200px;
     width: 100%;
-    background-image: url('/markerbcg.png');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: contain;
     font-size: 1em;
     padding: 2.5%;
+
 }
 
 .quotes {
-    color: var(--colorWhite);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +59,7 @@ label {
 
 .quotes p{
     box-shadow: 3px 4px 0px 0px var(--colorYellow);
-    outline: solid 1px var(--colorYellow);
+    outline: solid 1px var(--colorBlack);
     border-radius: 15px;
     padding: 10px;
     width: 100%;

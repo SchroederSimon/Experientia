@@ -34,7 +34,7 @@ function About() {
                     <h2>We ask ourselves the following question</h2>
                     <p>How we could <span>help</span> high school students <span>choose a
                         career</span> according to their expectations and try
-                        <span>to lower their anxiety and frustration?</span></p>
+                        <span> to lower their anxiety and frustration?</span></p>
                 </div>
             </div>
             <div className="explain-experientia">
