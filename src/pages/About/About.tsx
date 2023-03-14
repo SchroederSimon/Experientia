@@ -19,19 +19,17 @@ function About() {
     }, []);
     return (
         <div className="aboutGrid">
-            <div className="chart">
-                <div className="chart-title">
-                    <p>
-                        In our investigation about why students choose to change
-                        the career they was studying, we found that 69% said “wasn’t
-                        what i expected” and 17% because all the process was frustrating.
-                    </p>
-                </div>
-                <img src="/chartv3.png" alt="" />
+            <div className="chart-title">
+                <h1>
+                    In our investigation about why students choose to change
+                    the career they was studying, we found that 69% said “wasn’t
+                    what i expected” and 17% because all the process was frustrating.
+                </h1>
             </div>
-            <div className="question-right">
-                <div className="question-right-content">
-                    <h2>We ask ourselves the following question</h2>
+            <div className="question-right-content">
+                <img src="/chartv3.png" alt="" />
+                <div className="question-right">
+                    <h2>So we ask ourselves the following question</h2>
                     <p>How we could <span>help</span> high school students <span>choose a
                         career</span> according to their expectations and try
                         <span> to lower their anxiety and frustration?</span></p>
@@ -54,13 +52,13 @@ function About() {
                     })
                 }
             </div>
-            <div className="explain-actors-relation">
-                <div className="explain-actors-container">
+            <div className="explain-experientia">
+            <h1>What's the final goal with Experientia?</h1>
                     {
                         iconsActors.map(iconActors => {
                             return (
-                                <div className="container-icons-actors" key={iconActors.id}>
-                                    <div className="explain-titles-actors">
+                                <div className="container-icons" key={iconActors.id}>
+                                    <div className="explain-titles">
                                         <h2>{iconActors.title}</h2>
                                     </div>
                                     <div className="imageOverlay imageOverlay--primary">
@@ -71,7 +69,6 @@ function About() {
                             )
                         })
                     }
-                </div>
             </div>
         </div>
     )
