@@ -7,7 +7,7 @@
     height: auto;
 }
 .news-blog-container h1{
-    color: var(--colorWhite);
+    color: var(--colorBlack);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -21,7 +21,8 @@
     width: 80%;
 }
 .news-content{
-    background-color: var(--colorWhite);
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
     margin-bottom: 20px;
     padding: 6%;
     border-radius: 20px;
@@ -38,5 +39,5 @@
     margin-top: 10px;
 }
 .news-content a{
-    color: blue;
+    color: rgb(74, 74, 218);
 }

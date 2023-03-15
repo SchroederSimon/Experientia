@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import About from './pages/About/About'
 
 
@@ -15,6 +14,7 @@ function App() {
       <Home />
       <About />
       <News />
+      <Login />
     </>
   )
 }

@@ -5,22 +5,49 @@
     width: 100%;
     height: auto;
     z-index: -1;
+    margin-top: 100px;
 }
 
-.chart-title{
+.chart-title{  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 40px;
+}
+.chart-title h1{
     border: 1px var(--colorBlack) solid;
     box-shadow: 3px 4px 0px 0px var(--colorYellow);
     border-radius: 10px;
     padding: 2%;
+    font-size: 1.5em;
+}
+.chart-title img{
+    width: 40%;
 }
 
 .question-right-content{
-    margin-top: 20px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.question-right {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
-
+.question-right h2{
+    margin-top: 30px;
+    width: 60%;
+    font-weight: 400;
+    border: 1px var(--colorBlack) solid;
+    box-shadow: 3px 4px 0px 0px var(--colorYellow);
+    border-radius: 10px;
+    padding: 1%;
+}
 /* Explaining experientia */
 .explain-experientia{
     display: flex;

@@ -25,14 +25,14 @@ function About() {
                     the career they was studying, we found that 69% said “wasn’t
                     what i expected” and 17% because all the process was frustrating.
                 </h1>
+                <img src="/chartv3.png" alt="" />
             </div>
             <div className="question-right-content">
-                <img src="/chartv3.png" alt="" />
                 <div className="question-right">
-                    <h2>So we ask ourselves the following question</h2>
-                    <p>How we could <span>help</span> high school students <span>choose a
+                    <h1>So we ask ourselves the following question</h1>
+                    <h2>How we could <span>help</span> high school students <span>choose a
                         career</span> according to their expectations and try
-                        <span> to lower their anxiety and frustration?</span></p>
+                        <span> to lower their anxiety and frustration?</span></h2>
                 </div>
             </div>
             <div className="explain-experientia">

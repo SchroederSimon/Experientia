@@ -3,7 +3,6 @@ import { newsAPI } from '../../hooks/newsHook';
 import { useRedditPosts } from '../../hooks/redditHook';
 import { articleInterface } from '../../models/articlesInterface'
 
-// Service api news
 
 import '../../pages/News/News.css'
 
@@ -44,8 +43,8 @@ function News() {
                     posts.slice(0, 7).map((post) => (
                         <div className="news-content" key={post.url}>
                             <div className="news-information">
-                                <span>{post.author}</span>
                                 <h2>{post.title}</h2>
+                                <span>{post.author}</span>
                                 <p>{post.selftext?.split(' ').slice(0, 100).join(' ')}<span><a href={post.url} target="_blank"> Read more</a></span>
                                 </p>
                             </div>
