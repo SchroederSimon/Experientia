@@ -6,6 +6,6 @@ import EnvironmentPlugin from 'vite-plugin-environment'
 export default defineConfig({
   plugins: [
     react(),
-    EnvironmentPlugin(['API_KEY'])
+    EnvironmentPlugin(['API_KEY', 'API_KEY_FIREBASE', 'AUTH_DOMAIN', 'APP_ID'])
   ],
 })
