@@ -1,0 +1,29 @@
+.profile-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-profile-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+/* User profile */
+.user-profile-information{
+    display: flex;
+    flex-direction: column;
+}
+.user-profile-information img{
+    width: 40%;
+}
+
+/* User courses and about */
+.user-profile-course{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-course span{
+    color: var(--colorGray);
+}

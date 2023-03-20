@@ -1,5 +1,6 @@
 import '../../pages/Home/Home.css'
 import { useEffect, useState } from 'react';
+import { Outlet, Link } from "react-router-dom";
 
 //Interface
 import { quotesInterface } from '../../models/quotesInterface';
@@ -25,11 +26,11 @@ function Home() {
           <h1 className="logo">Experientia</h1>
           <ul className="nav-links">
             <li><a href="#">HOME</a></li>
-            <li><a href="#">NEWS</a></li>
+            <li><Link to={`news`}>NEWS</Link></li>
             <li><a href="#">COURSES</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li>ABOUT</li>
           </ul>
-          <button className="login-btn">LOGIN</button>
+          <button className="login-btn"><Link to={`login`}>LOGIN</Link></button>
         </nav>
         <div className="phraseContainer">
           <h1>DISCOVER YOURSELF</h1>
@@ -53,6 +54,9 @@ function Home() {
             })
           }
         </div>
+      </div>
+      <div>
+        <Outlet />
       </div>
     </>
   )

@@ -7,17 +7,23 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // add state for login status
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       const userCredential = await auth.signInWithEmailAndPassword(email, password);
       console.log(userCredential.user);
+      setIsLoggedIn(true); // set login status to true on successful login
     } catch (error) {
       console.log(error);
     }
   };
 
+  if (isLoggedIn) {
+    return <p>You are now logged in!</p>; // show a message when the user is logged in
+  }
+  
   return (
     <div className="login-container">
       <img src="/logo.png" alt="" />
