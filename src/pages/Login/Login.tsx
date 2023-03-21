@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../../pages/Login/Login.css'
 import { auth } from '../../services/firebase';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -9,12 +10,15 @@ function Login() {
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false); // add state for login status
 
+  const navigate = useNavigate();
+
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       const userCredential = await auth.signInWithEmailAndPassword(email, password);
       console.log(userCredential.user);
       setIsLoggedIn(true); // set login status to true on successful login
+      navigate('user/profile');
     } catch (error) {
       console.log(error);
     }
@@ -23,7 +27,7 @@ function Login() {
   if (isLoggedIn) {
     return <p>You are now logged in!</p>; // show a message when the user is logged in
   }
-  
+
   return (
     <div className="login-container">
       <img src="/logo.png" alt="" />

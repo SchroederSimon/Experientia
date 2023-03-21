@@ -22,7 +22,7 @@
 }
 
 
-input {
+.login-form input {
     padding: 10px;
     outline: 0;
     border: 1px solid #fff;
@@ -31,7 +31,7 @@ input {
     font-size: 15px;
 }
 
-label {
+.login-form label {
     color: #fff;
     cursor: text;
 }

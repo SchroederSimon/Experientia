@@ -12,6 +12,7 @@
   --colorWhite: #fff;
   --colorOrange: #fe9900;
   --colorGray: #969696;
+  --colorLightBlue: #edf1fd;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Mulish';
-  background-color: var(--colorWhite);
+  background-color: var(--colorLightBlue);
 }
 
 h1, h2 {
