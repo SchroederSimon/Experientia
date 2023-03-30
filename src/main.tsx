@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/login/user/profile",
+        path: "/login/user/profile/:id",
         element: <Profile />,
       },
       {

@@ -1,10 +1,6 @@
-import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "@firebase/auth";
+import { getAuth, onAuthStateChanged, signInWithPopup, signOut } from "@firebase/auth";
 import { useState } from "react";
 import { auth, googleProvider } from "../services/firebase";
-
-
-console.log(auth?.currentUser?.email)
-
 
 
 export const handleLogOut = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -24,3 +20,17 @@ export const handleSignInWithGoogle = async (event: React.FormEvent<HTMLFormElem
         console.log(error)
     }
 }
+
+
+export function handleAuthStateChange() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        const uid = user.uid;
+        console.log(uid);
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+  }

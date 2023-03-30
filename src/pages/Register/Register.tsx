@@ -53,8 +53,8 @@
 //         </form>
 //     </div>
 // );
-import { auth, googleProvider } from "../../services/firebase"
-import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "@firebase/auth"
+import { auth } from "../../services/firebase"
+import { createUserWithEmailAndPassword } from "@firebase/auth"
 import { useState } from "react"
 import '../../pages/Register/Register.css'
 import { handleLogOut, handleSignInWithGoogle  } from "../../hooks/useAuth" 
@@ -78,7 +78,7 @@ function Register() {
     return (
         <div className="register-container">
             <img src="/logo.png" alt="" />
-            <h1>Login</h1>
+            <h1>Register</h1>
             <form  onSubmit={handleSignIn}>
                 <div className="register-inputs">
                     <input
