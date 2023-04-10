@@ -1,63 +1,9 @@
-// import '../../pages/Register/Register.css'
-// import React, { useState } from "react";
-// import { auth, firestore } from '../../services/firebase';
-
-
-// const [name, setName] = useState("");
-// const [email, setEmail] = useState("");
-// const [password, setPassword] = useState("");
-
-// const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-//     event.preventDefault();
-
-//     const { user } = await auth.createUserWithEmailAndPassword(email, password);
-
-//     if (user) {
-//         await firestore.collection("users").doc(user.uid).set({
-//             name,
-//         });
-//         console.log("User account created successfully!");
-//     } else {
-//         console.error("Error creating user account: User is null.");
-//     }
-// };
-
-// return (
-//     <div className="register-container">
-//         <form onSubmit={handleSubmit}>
-//             <label htmlFor="name">Name:</label>
-//             <input
-//                 type="text"
-//                 id="name"
-//                 value={name}
-//                 onChange={(event) => setName(event.target.value)}
-//             />
-
-//             <label htmlFor="email">Email:</label>
-//             <input
-//                 type="email"
-//                 id="email"
-//                 value={email}
-//                 onChange={(event) => setEmail(event.target.value)}
-//             />
-
-//             <label htmlFor="password">Password:</label>
-//             <input
-//                 type="password"
-//                 id="password"
-//                 value={password}
-//                 onChange={(event) => setPassword(event.target.value)}
-//             />
-
-//             <button type="submit">Submit</button>
-//         </form>
-//     </div>
-// );
-import { auth } from "../../services/firebase"
+import { auth, db } from "../../services/firebase"
 import { createUserWithEmailAndPassword } from "@firebase/auth"
 import { useState } from "react"
 import '../../pages/Register/Register.css'
 import { handleLogOut, handleSignInWithGoogle  } from "../../hooks/useAuth" 
+import { addDoc, collection } from "firebase/firestore"
 
 function Register() {
     const [email, setEmail] = useState("")
@@ -65,15 +11,32 @@ function Register() {
 
     console.log(auth?.currentUser?.email)
 
+    // const handleSignIn = async (event: React.FormEvent<HTMLFormElement>) => {
+    //     event.preventDefault();
+    //     try {
+    //         await createUserWithEmailAndPassword(auth, email, password);
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
     const handleSignIn = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
+            // Create user with email and password
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            
+            // Create new document in "users" collection with user information
+            const userDocRef = await addDoc(collection(db, "users"), {
+                uid: userCredential.user?.uid,
+                email: userCredential.user?.email,
+                // Add any other user information you want to store here
+            });
+    
+            console.log("User created successfully!");
         } catch (error) {
             console.log(error)
         }
     }
-
 
     return (
         <div className="register-container">
