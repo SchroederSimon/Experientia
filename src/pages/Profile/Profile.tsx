@@ -1,47 +1,44 @@
-import { useState, useEffect } from "react";
-import { auth, db } from "../../services/firebase";
-import { collection, doc, getDoc, getFirestore, onSnapshot } from "firebase/firestore";
-import { useParams } from "react-router-dom";
+import { doc, getDoc, getDocFromCache } from "firebase/firestore";
+import { db } from "../../services/firebase";
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 
 interface UserData {
   uid: string;
   email: string;
-  displayName: string;
-  age: string;
-  // Add any other user information you want to display here
+  age: number;
 }
 
 function Profile() {
-  const [userData, setUserData] = useState<UserData>({
-    uid: '',
-    email: '',
-    displayName: '',
-    age: '',
-    // Initialize any other user information you want to display here
-  });
+  const [userData, setUserData] = useState<UserData>();
 
-  const { userId } = useParams<{ userId: string }>();
+  const location = useLocation();
+  const userId = location.pathname.split("/").pop();
 
   useEffect(() => {
-    const userId = auth.currentUser?.uid;
-    if (!userId) return;
-    
-    const userDocRef = doc(db, 'users', userId);
-    const unsub = onSnapshot(userDocRef, (doc) => {
-      const userData = doc.data() as UserData;
-      setUserData(userData);
-    });
-    return unsub;
+    async function getUserData() {
+      const docRef = doc(db, "users", userId ?? '');
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        setUserData(docSnap.data() as UserData);
+      } else {
+        console.log("No such document!");
+      }
+    }
+    getUserData();
   }, [userId]);
 
   return (
     <div>
-      <h1>User Profile</h1>
-      <p>Email: {auth.currentUser?.email}</p>
-      <p>Display Name: {userData?.displayName}</p>
-      <p>Age: {userData?.age}</p>
-      {/* Add any other user information you want to display here */}
+      {userData && (
+        <div>
+          <h1>{userData.email}</h1>
+          <p>{userData.uid}</p>
+          <p>{userData.age}</p>
+        </div>
+      )}
     </div>
   );
 }
