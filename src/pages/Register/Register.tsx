@@ -29,6 +29,8 @@ function Register() {
             const userDocRef = await addDoc(collection(db, "users"), {
                 uid: userCredential.user?.uid,
                 email: userCredential.user?.email,
+                displayName: "",
+                age: ""
                 // Add any other user information you want to store here
             });
     
