@@ -1,4 +1,43 @@
 .profile-container {
     width: 100%;
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.left-profile-container{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: red;
+}
+
+.profile-interaction{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-friend-message{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 50px;
+}
+.profile-friend-message button{
+    margin-top: 20px;
+    padding: 10px 10px;
+    box-shadow: 3px 4px 0px 0px var(--colorWhite);
+    background-color: var(--colorYellow);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--colorBlack);
+    font-size: 18px;
+    text-decoration: none;
+}
+.right-profile-container{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: blue;
 }

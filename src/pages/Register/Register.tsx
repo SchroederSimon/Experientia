@@ -11,14 +11,6 @@ function Register() {
 
     console.log(auth?.currentUser?.email)
 
-    // const handleSignIn = async (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault();
-    //     try {
-    //         await createUserWithEmailAndPassword(auth, email, password);
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
     const handleSignIn = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
@@ -30,7 +22,11 @@ function Register() {
                 uid: userCredential.user?.uid,
                 email: userCredential.user?.email,
                 displayName: "",
-                age: ""
+                age: "",
+                role: "",
+                interest: "",
+                degree: "",
+                city: ""
                 // Add any other user information you want to store here
             });
     
